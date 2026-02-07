@@ -1,5 +1,5 @@
 from typing import Optional, Tuple
-from .model import SINGLE_QUOTE, DOUBLE_QUOTE, BACKSLASH, QuotePolicy
+from quotes_convert.model import SINGLE_QUOTE, DOUBLE_QUOTE, BACKSLASH, QuotePolicy
 
 
 class QuoteConverter:

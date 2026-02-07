@@ -1,6 +1,6 @@
 from typing import Iterable, Generator
-from .converter import QuoteConverter
-from .model import QuotePolicy, SINGLE, DOUBLE
+from quotes_convert.converter import QuoteConverter
+from quotes_convert.model import QuotePolicy, SINGLE, DOUBLE
 
 
 def _convert_text(text: str, policy: QuotePolicy) -> str:
