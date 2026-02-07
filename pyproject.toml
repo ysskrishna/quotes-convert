@@ -1,7 +1,7 @@
 [project]
 name = "quotes-convert"
 version = "1.0.0"
-description = "Convert between single and double quotes in strings with proper escaping"
+description = "Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular to-single-quotes npm package"
 readme = "README.md"
 requires-python = ">=3.8"
 authors = [
