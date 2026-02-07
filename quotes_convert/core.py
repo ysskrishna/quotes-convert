@@ -4,6 +4,18 @@ from .model import QuotePolicy, SINGLE, DOUBLE
 
 
 def _convert_text(text: str, policy: QuotePolicy) -> str:
+    """Convert quotes in text according to the given policy.
+    
+    Args:
+        text: The string to convert
+        policy: The quote conversion policy
+        
+    Returns:
+        Converted string
+        
+    Raises:
+        TypeError: If text is not a string
+    """
     if not isinstance(text, str):
         raise TypeError("expected str")
 
@@ -49,7 +61,18 @@ def double_quotes(text: str) -> str:
 def _convert_stream(
     iterable: Iterable[str], policy: QuotePolicy
 ) -> Generator[str, None, None]:
-
+    """Convert quotes in a stream according to the given policy.
+    
+    Args:
+        iterable: An iterable yielding string chunks
+        policy: The quote conversion policy
+        
+    Yields:
+        Converted string chunks
+        
+    Raises:
+        TypeError: If stream yields non-string values
+    """
     converter = QuoteConverter(policy)
 
     for chunk in iterable:

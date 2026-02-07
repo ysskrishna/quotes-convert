@@ -3,6 +3,12 @@ from .model import SINGLE_QUOTE, DOUBLE_QUOTE, BACKSLASH, QuotePolicy
 
 
 class QuoteConverter:
+    """State machine for converting quotes character by character.
+    
+    This converter handles the stateful conversion of quotes, including
+    proper escaping and unescaping of quote characters.
+    """
+    
     def __init__(self, policy: QuotePolicy):
         self.target = policy.target
         self.source = policy.source
@@ -12,6 +18,14 @@ class QuoteConverter:
         self._pending: Optional[str] = None
 
     def feed(self, char: str) -> str:
+        """Feed a single character to the converter.
+        
+        Args:
+            char: A single character to process
+            
+        Returns:
+            Output string (may be empty if buffering)
+        """
         if self._pending is None:
             self._pending = char
             return ""
@@ -24,6 +38,11 @@ class QuoteConverter:
         return out
 
     def flush(self) -> str:
+        """Flush any pending character.
+        
+        Returns:
+            Final output string
+        """
         if self._pending is None:
             return ""
 
