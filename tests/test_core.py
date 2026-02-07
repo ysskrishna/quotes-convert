@@ -96,6 +96,18 @@ class TestComplexEscaping:
     def test_quote_inside_quote(self):
         result = double_quotes("'can\\'t'")
         assert result == '"can\'t"'
+    
+    def test_escaped_quotes_at_boundaries(self):
+        # Test case #6 from review.md
+        result = single_quotes('\\"abc\\"')
+        assert result == "'abc'"
+        
+    def test_escaped_quote_only(self):
+        # Test case #11 from review.md
+        result = single_quotes('\\"')
+        assert result == "'"
+        result = double_quotes("\\'")
+        assert result == '"'
 
 
 class TestMultipleQuotedStrings:
