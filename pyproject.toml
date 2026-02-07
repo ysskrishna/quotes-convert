@@ -1,10 +1,58 @@
 [project]
 name = "quotes-convert"
 version = "0.1.0"
-description = "Add your description here"
+description = "Convert between single and double quotes in strings with proper escaping"
 readme = "README.md"
 requires-python = ">=3.8"
+authors = [
+  {name = "Y. Siva Sai Krishna", email = "sivasaikrishnassk@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Text Processing",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+keywords = [
+    "quotes",
+    "convert",
+    "single-quotes",
+    "double-quotes",
+    "escaping",
+    "strings",
+    "text-processing",
+    "utilities",
+]
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/ysskrishna/quotes-convert"
+Repository = "https://github.com/ysskrishna/quotes-convert.git"
+Issues = "https://github.com/ysskrishna/quotes-convert/issues"
+Changelog = "https://github.com/ysskrishna/quotes-convert/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["quotes_convert"]
 
 [dependency-groups]
 dev = [
