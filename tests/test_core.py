@@ -82,3 +82,31 @@ class TestTypeErrors:
     def test_double_quotes_not_string(self):
         with pytest.raises(TypeError):
             double_quotes(None)
+
+
+class TestComplexEscaping:
+    def test_multiple_escaped_quotes(self):
+        result = single_quotes('"a\\"b\\"c"')
+        assert result == '\'a"b"c\''
+        
+    def test_backslash_before_non_quote(self):
+        result = single_quotes('"test\\n"')
+        assert result == "'test\\n'"
+        
+    def test_quote_inside_quote(self):
+        result = double_quotes("'can\\'t'")
+        assert result == '"can\'t"'
+
+
+class TestMultipleQuotedStrings:
+    def test_two_strings(self):
+        result = single_quotes('"first" "second"')
+        assert result == "'first' 'second'"
+        
+    def test_mixed_quote_types(self):
+        result = single_quotes('"double" and \'single\'')
+        assert result == "'double' and 'single'"
+        
+    def test_nested_structure(self):
+        result = single_quotes('x = "value"; y = "other"')
+        assert result == "x = 'value'; y = 'other'"
