@@ -1,6 +1,6 @@
 [project]
 name = "quotes-convert"
-version = "0.1.0"
+version = "1.0.0"
 description = "Convert between single and double quotes in strings with proper escaping"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -53,8 +53,3 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["quotes_convert"]
-
-[dependency-groups]
-dev = [
-    "pytest>=8.3.5",
-]
