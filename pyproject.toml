@@ -33,6 +33,12 @@ keywords = [
     "strings",
     "text-processing",
     "utilities",
+    "string-manipulation",
+    "zero-dependency",
+    "type-safe",
+    "streaming",
+    "developer-tools",
+    "json-formatting",
 ]
 dependencies = []
 
