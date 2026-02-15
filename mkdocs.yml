@@ -50,6 +50,8 @@ extra:
     - strings
     - text-processing
     - streaming
+  google_site_verification: "ICfb1XMVpLJZcn7JdUoaUsNZ-0D8LH1uztDuFd0VNfM"
+  og_image: https://raw.githubusercontent.com/ysskrishna/nestedutils/main/media/og.png
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ysskrishna/quotes-convert
