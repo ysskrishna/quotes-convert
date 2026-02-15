@@ -1,38 +1,22 @@
-# quotes_convert
+---
+title: Python Library for Quote Conversion
 
-Convert matching double-quotes to single-quotes or vice versa in strings and streams.
+description: "Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular to-single-quotes npm package. Features proper escaping, memory-efficient streaming, zero dependencies, and full type safety."
 
-## Installation
+keywords:
+  - quotes-convert
+  - Python library
+  - quote conversion
+  - single quotes
+  - double quotes
+  - string manipulation
+  - text processing
+  - escaping
+  - streaming
+  - zero dependency
+  - type safe
+  - JSON formatting
+  - developer tools
+---
 
-```bash
-pip install quotes-convert
-```
-
-## Quick start
-
-```python
-from quotes_convert import single_quotes, double_quotes, single_quotes_stream
-
-# Convert a single string to single quotes
-text = '{"name": "Alice", "msg": "He said \\"Hello\\""}'
-print(single_quotes(text))
-
-# Convert a stream (generator of chunks)
-def chunks():
-    yield '{"a": "b",'
-    yield ' "c": "d"}'
-
-for out_chunk in single_quotes_stream(chunks()):
-    print(out_chunk, end="")
-```
-
-## Features
-
-- Convert strings to single or double quotes
-- Stream-safe incremental conversion for large inputs
-- Zero dependencies, typed package
-
-## Contributing
-
-See the repository `CONTRIBUTING.md` for contribution guidelines.
-
+--8<-- "README.md"
