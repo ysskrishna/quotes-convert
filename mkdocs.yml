@@ -1,0 +1,61 @@
+site_name: quotes-convert
+site_description: Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular to-single-quotes npm package.
+site_author: Y. Siva Sai Krishna
+site_url: "https://ysskrishna.github.io/quotes-convert"
+repo_name: "ysskrishna/quotes-convert"
+repo_url: "https://github.com/ysskrishna/quotes-convert"
+copyright: Copyright &copy; 2026 Y. Siva Sai Krishna
+docs_dir: docs
+
+nav:
+  - Home: index.md
+  - Interactive Playground: playground.md
+  - API Reference: api-reference.md
+  - Contributing: CONTRIBUTING.md
+  - Changelog: CHANGELOG.md
+  - License: LICENSE.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: false
+            show_signature_annotations: true
+            separate_signature: true
+            docstring_style: google
+            merge_init_into_class: true
+
+theme:
+  name: material
+  custom_dir: docs/theme/overrides
+  locale: en
+  features:
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.snippets:
+      base_path: .
+
+extra:
+  keywords:
+    - quotes
+    - convert
+    - single-quotes
+    - double-quotes
+    - strings
+    - text-processing
+    - streaming
+  google_site_verification: "ICfb1XMVpLJZcn7JdUoaUsNZ-0D8LH1uztDuFd0VNfM"
+  og_image: https://raw.githubusercontent.com/ysskrishna/quotes-convert/main/media/og.png
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ysskrishna/quotes-convert
+

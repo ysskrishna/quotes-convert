@@ -1,12 +1,16 @@
 # quotes-convert
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ysskrishna/quotes-convert/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ysskrishna/quotes-convert/blob/main/LICENSE)
 ![Tests](https://github.com/ysskrishna/quotes-convert/actions/workflows/test.yml/badge.svg)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/pypi/v/quotes-convert)](https://pypi.org/project/quotes-convert/)
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/quotes-convert?period=total&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=BLUE&left_text=downloads)](https://pepy.tech/projects/quotes-convert)
+[![Documentation](https://img.shields.io/badge/docs-ysskrishna.github.io%2Fquotes--convert-blue.svg)](https://ysskrishna.github.io/quotes-convert/)
+[![Interactive Playground](https://img.shields.io/badge/demo-Try%20it%20now!-green.svg)](https://ysskrishna.github.io/quotes-convert/playground/)
 
 Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular [to-single-quotes](https://github.com/sindresorhus/to-single-quotes) npm package.
+
+> 🚀 **Try it interactively in your browser!** Test the library with our [Interactive Playground](https://ysskrishna.github.io/quotes-convert/playground/) - no installation required.
 
 ## Features
 
@@ -126,7 +130,7 @@ See [CHANGELOG.md](https://github.com/ysskrishna/quotes-convert/blob/main/CHANGE
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guide](https://github.com/ysskrishna/quotes-convert/blob/main/CONTRIBUTING.md) for details.
+Contributions are welcome! Please read our [Contributing Guide](https://github.com/ysskrishna/quotes-convert/blob/main/CONTRIBUTING.md) for details on our code of conduct, development setup, and the process for submitting pull requests.
 
 ## Support
 
@@ -147,5 +151,7 @@ MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) - see [LICENSE](http
   <a href="https://github.com/ysskrishna">Author's GitHub</a> •
   <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
   <a href="https://github.com/ysskrishna/quotes-convert/issues">Report Issues</a> •
-  <a href="https://pypi.org/project/quotes-convert/">Package on PyPI</a>
+  <a href="https://pypi.org/project/quotes-convert/">Package on PyPI</a> •
+  <a href="https://ysskrishna.github.io/quotes-convert/">Package Documentation</a> •
+  <a href="https://ysskrishna.github.io/quotes-convert/playground/">Package Playground</a>
 </p>
