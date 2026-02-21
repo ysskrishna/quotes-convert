@@ -1,6 +1,6 @@
 [project]
 name = "quotes-convert"
-version = "1.0.0"
+version = "1.1.0"
 description = "Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular to-single-quotes npm package"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -45,6 +45,10 @@ dependencies = []
 [dependency-groups]
 dev = [
     "pytest>=8.3.5",
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.7.1",
+    "mkdocstrings>=0.26.1",
+    "mkdocstrings-python>=1.11.1",
 ]
 
 [project.urls]
