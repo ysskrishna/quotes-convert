@@ -1,24 +1,25 @@
 [project]
 name = "quotes-convert"
-version = "1.1.0"
+version = "1.2.0"
 description = "Convert matching double-quotes to single-quotes or vice versa in strings and streams. Inspired by the popular to-single-quotes npm package"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [
   {name = "Y. Siva Sai Krishna", email = "sivasaikrishnassk@gmail.com"}
 ]
 license = {text = "MIT"}
 classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
-  "License :: OSI Approved :: MIT License",
-  "Operating System :: OS Independent",
-  "Development Status :: 4 - Beta",
-  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Topic :: Text Processing",
   "Topic :: Utilities",
@@ -39,6 +40,9 @@ keywords = [
     "streaming",
     "developer-tools",
     "json-formatting",
+    "quote-conversion",
+    "string-formatting",
+    "python-strings"
 ]
 dependencies = []
 
@@ -53,9 +57,11 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/ysskrishna/quotes-convert"
+Documentation = "https://ysskrishna.github.io/quotes-convert/"
 Repository = "https://github.com/ysskrishna/quotes-convert.git"
 Issues = "https://github.com/ysskrishna/quotes-convert/issues"
 Changelog = "https://github.com/ysskrishna/quotes-convert/blob/main/CHANGELOG.md"
+Download = "https://pypi.org/project/quotes-convert/"
 
 [build-system]
 requires = ["hatchling"]
