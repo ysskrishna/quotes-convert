@@ -43,14 +43,6 @@ fixed    = single_quotes(original)
 pip install quotes-convert
 ```
 
-### Installing with CLI support
-
-To use the command-line interface, install with the `cli` extra:
-
-```bash
-pip install quotes-convert[cli]
-```
-
 ## Usage Examples
 
 ### Basic Usage
@@ -129,60 +121,24 @@ The CLI tool allows you to convert quotes in files and streams directly from the
 pip install quotes-convert[cli]
 ```
 
-### Basic Usage
+### Quick Examples
 
 ```bash
-# Convert file to single quotes and print to stdout
-quotes-convert --single file.txt
+# Convert to single quotes
+quotes-convert -s file.py
+echo 'x = "hello"' | quotes-convert -s
 
-# Convert file to double quotes and print to stdout
-quotes-convert --double file.txt
-
-# Use short flags
-quotes-convert -s file.txt
-quotes-convert -d file.txt
-```
-
-### Output Options
-
-```bash
-# Write output to a file
-quotes-convert --single input.txt --output output.txt
-quotes-convert -s input.txt -o output.txt
+# Convert to double quotes
+quotes-convert -d file.py
 
 # Edit file in place
-quotes-convert --single --in-place file.txt
-quotes-convert -s -i file.txt
+quotes-convert -s -i file.py
 
-# Process multiple files in place
-quotes-convert --double --in-place file1.txt file2.txt
+# Check version
+quotes-convert --version
 ```
 
-### Pipe Usage
-
-```bash
-# Read from stdin, write to stdout
-cat file.txt | quotes-convert --single
-
-# Read from stdin, write to file
-cat file.txt | quotes-convert --single --output output.txt
-
-# Chain with other commands
-echo 'x = "test"' | quotes-convert -s | grep test
-```
-
-### CLI Examples
-
-```bash
-# Convert shell script quotes
-quotes-convert -s script.sh -o script_converted.sh
-
-# Process JSON-like strings
-echo "{'key': 'value'}" | quotes-convert -d
-
-# Batch convert multiple files
-quotes-convert --single --in-place *.py
-```
+For complete documentation including batch processing, shell integration, and advanced usage, see the **[CLI Guide](https://ysskrishna.github.io/quotes-convert/cli-guide/)**.
 
 ## API Reference
 

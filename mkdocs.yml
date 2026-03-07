@@ -9,6 +9,7 @@ docs_dir: docs
 
 nav:
   - Home: index.md
+  - CLI Guide: cli-guide.md
   - Interactive Playground: playground.md
   - API Reference: api-reference.md
   - Contributing: CONTRIBUTING.md
@@ -53,9 +54,10 @@ extra:
     - strings
     - text-processing
     - streaming
+    - cli
+    - command-line
   google_site_verification: "ICfb1XMVpLJZcn7JdUoaUsNZ-0D8LH1uztDuFd0VNfM"
   og_image: https://raw.githubusercontent.com/ysskrishna/quotes-convert/main/media/og.png
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ysskrishna/quotes-convert
-

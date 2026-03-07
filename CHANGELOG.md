@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0]
+
+### Added
+- **Command-Line Interface (CLI)**: New optional CLI tool for converting quotes in files and streams
+  - Install with `pip install quotes-convert[cli]`
+  - Supports stdin/stdout, file processing, and in-place editing
+  - Options: `--single`/`-s`, `--double`/`-d`, `--in-place`/`-i`, `--output`/`-o`, `--version`/`-V`
+- Comprehensive CLI documentation in dedicated `CLI.md` guide
+- CLI Guide page in MkDocs documentation site
+- Lazy loading of typer dependency for graceful error handling when CLI extras not installed
+- Specific exception handling for file operations (FileNotFoundError, PermissionError, UnicodeDecodeError)
+
+### Changed
+- Minimum Python version updated to 3.9
+- README CLI section simplified with link to full CLI Guide
+- Added `cli` and `command-line` keywords to package metadata
+- Added `Environment :: Console` classifier
+- Added typer to dev dependencies for CLI testing
+- 23 new CLI tests covering all functionality
+
+**CLI Documentation:** [https://ysskrishna.github.io/quotes-convert/cli-guide/](https://ysskrishna.github.io/quotes-convert/cli-guide/)
+
 ## [1.1.0]
 
 ### Added
@@ -40,5 +62,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stream processing support for large text processing
 - Handles complex escaping scenarios
 
+[1.2.0]: https://github.com/ysskrishna/quotes-convert/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ysskrishna/quotes-convert/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ysskrishna/quotes-convert/releases/tag/v1.0.0
