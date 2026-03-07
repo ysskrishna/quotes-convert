@@ -1,4 +1,5 @@
 """Tests for the CLI module."""
+import re
 import tempfile
 from pathlib import Path
 
@@ -9,6 +10,12 @@ typer = pytest.importorskip("typer")
 from typer.testing import CliRunner
 
 runner = CliRunner(mix_stderr=False)
+
+
+def strip_ansi_codes(text: str) -> str:
+    """Strip ANSI escape codes from text."""
+    ansi_escape = re.compile(r'\x1b\[[0-9;]*m')
+    return ansi_escape.sub('', text)
 
 
 def get_app():
@@ -355,7 +362,9 @@ def test_cli_help(app):
     """Test CLI help output."""
     result = runner.invoke(app, ["--help"])
     assert result.exit_code == 0
-    assert "--single" in result.stdout
-    assert "--double" in result.stdout
-    assert "--in-place" in result.stdout
-    assert "--output" in result.stdout
+    # Strip ANSI codes before checking for options
+    clean_output = strip_ansi_codes(result.stdout)
+    assert "--single" in clean_output
+    assert "--double" in clean_output
+    assert "--in-place" in clean_output
+    assert "--output" in clean_output
