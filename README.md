@@ -15,25 +15,26 @@ Convert matching double-quotes to single-quotes or vice versa in strings and str
 ## Features
 
 - **Multiple input types**: Convert quotes in strings and streams
+- **Command-line interface**: Optional CLI tool for file and stream processing
 - **Proper escaping**: Automatically handles quote escaping and unescaping
 - **Memory efficient**: Process large texts with streaming without loading everything into memory
-- **Zero dependencies**: Lightweight with no external dependencies
+- **Zero dependencies**: Lightweight core library with no external dependencies
 - **Type safe**: Full type hints for excellent IDE support
 
 ## Why use this library?
 
-Why not just use `.replace('"', "'")`? Because simply replacing quotes breaks strings that contain escaped quotes.
+Why not just use `.replace('"', "'")`? Because simply replacing quotes breaks strings that contain nested quotes.
 
 ```python
 # The problem with simple replace
-original = r'He said "Don\'t do it"'
+original = '"result = \'test\'"'
 broken   = original.replace('"', "'")
-# Result: 'He said 'Don\'t do it'' -> Syntax Error!
+# Result: 'result = 'test'' -> Broken! Unmatched quotes
 
 # The solution: quotes-convert handles escaping correctly
 from quotes_convert import single_quotes
 fixed    = single_quotes(original)
-# Result: 'He said "Don\'t do it"' -> Correctly preserves meaning
+# Result: 'result = \'test\'' -> Fixed! Properly escaped
 ```
 
 ## Installation
@@ -109,6 +110,35 @@ for chunk in single_quotes_stream(line_generator()):
 # line 1: 'hello'
 # line 2: 'world'
 ```
+
+## Command-Line Interface
+
+The CLI tool allows you to convert quotes in files and streams directly from the command line.
+
+### Installation
+
+```bash
+pip install quotes-convert[cli]
+```
+
+### Quick Examples
+
+```bash
+# Convert to single quotes
+quotes-convert -s file.py
+echo 'x = "hello"' | quotes-convert -s
+
+# Convert to double quotes
+quotes-convert -d file.py
+
+# Edit file in place
+quotes-convert -s -i file.py
+
+# Check version
+quotes-convert --version
+```
+
+For complete documentation including batch processing, shell integration, and advanced usage, see the **[CLI Guide](https://ysskrishna.github.io/quotes-convert/cli-guide/)**.
 
 ## API Reference
 
