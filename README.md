@@ -15,9 +15,10 @@ Convert matching double-quotes to single-quotes or vice versa in strings and str
 ## Features
 
 - **Multiple input types**: Convert quotes in strings and streams
+- **Command-line interface**: Optional CLI tool for file and stream processing
 - **Proper escaping**: Automatically handles quote escaping and unescaping
 - **Memory efficient**: Process large texts with streaming without loading everything into memory
-- **Zero dependencies**: Lightweight with no external dependencies
+- **Zero dependencies**: Lightweight core library with no external dependencies
 - **Type safe**: Full type hints for excellent IDE support
 
 ## Why use this library?
@@ -40,6 +41,14 @@ fixed    = single_quotes(original)
 
 ```bash
 pip install quotes-convert
+```
+
+### Installing with CLI support
+
+To use the command-line interface, install with the `cli` extra:
+
+```bash
+pip install quotes-convert[cli]
 ```
 
 ## Usage Examples
@@ -108,6 +117,71 @@ for chunk in single_quotes_stream(line_generator()):
 # Output:
 # line 1: 'hello'
 # line 2: 'world'
+```
+
+## Command-Line Interface
+
+The CLI tool allows you to convert quotes in files and streams directly from the command line.
+
+### Installation
+
+```bash
+pip install quotes-convert[cli]
+```
+
+### Basic Usage
+
+```bash
+# Convert file to single quotes and print to stdout
+quotes-convert --single file.txt
+
+# Convert file to double quotes and print to stdout
+quotes-convert --double file.txt
+
+# Use short flags
+quotes-convert -s file.txt
+quotes-convert -d file.txt
+```
+
+### Output Options
+
+```bash
+# Write output to a file
+quotes-convert --single input.txt --output output.txt
+quotes-convert -s input.txt -o output.txt
+
+# Edit file in place
+quotes-convert --single --in-place file.txt
+quotes-convert -s -i file.txt
+
+# Process multiple files in place
+quotes-convert --double --in-place file1.txt file2.txt
+```
+
+### Pipe Usage
+
+```bash
+# Read from stdin, write to stdout
+cat file.txt | quotes-convert --single
+
+# Read from stdin, write to file
+cat file.txt | quotes-convert --single --output output.txt
+
+# Chain with other commands
+echo 'x = "test"' | quotes-convert -s | grep test
+```
+
+### CLI Examples
+
+```bash
+# Convert shell script quotes
+quotes-convert -s script.sh -o script_converted.sh
+
+# Process JSON-like strings
+echo "{'key': 'value'}" | quotes-convert -d
+
+# Batch convert multiple files
+quotes-convert --single --in-place *.py
 ```
 
 ## API Reference
