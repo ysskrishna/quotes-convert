@@ -22,18 +22,18 @@ Convert matching double-quotes to single-quotes or vice versa in strings and str
 
 ## Why use this library?
 
-Why not just use `.replace('"', "'")`? Because simply replacing quotes breaks strings that contain escaped quotes.
+Why not just use `.replace('"', "'")`? Because simply replacing quotes breaks strings that contain nested quotes.
 
 ```python
 # The problem with simple replace
-original = r'He said "Don\'t do it"'
+original = '"result = \'test\'"'
 broken   = original.replace('"', "'")
-# Result: 'He said 'Don\'t do it'' -> Syntax Error!
+# Result: 'result = 'test'' -> Broken! Unmatched quotes
 
 # The solution: quotes-convert handles escaping correctly
 from quotes_convert import single_quotes
 fixed    = single_quotes(original)
-# Result: 'He said "Don\'t do it"' -> Correctly preserves meaning
+# Result: 'result = \'test\'' -> Fixed! Properly escaped
 ```
 
 ## Installation

@@ -238,3 +238,23 @@ class TestInnerQuoteHandling:
     
     def test_inner_double_quotes_in_single_quoted_string(self):
         assert single_quotes('\'bar "foo" baz\'') == "'bar \\'foo\\' baz'"
+
+
+class TestReadmeExamples:
+    """Test cases that match examples shown in README.md"""
+    
+    def test_why_use_this_library_example(self):
+        """Verify the 'Why use this library?' example from README"""
+        # The example from README lines 27-37
+        original = '"result = \'test\'"'
+        
+        # Simple replace is broken (unmatched quotes)
+        broken = original.replace('"', "'")
+        assert broken == "'result = 'test''"  # Visibly broken
+        
+        # Library handles it correctly
+        fixed = single_quotes(original)
+        assert fixed == "'result = \\'test\\''", "Should properly escape inner quotes"
+        
+        # Verify content is preserved
+        assert eval(original) == eval(fixed), "Content should be preserved"
