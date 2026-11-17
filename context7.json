@@ -1,5 +1,7 @@
 {
   "$schema": "https://context7.com/schema/context7.json",
+  "url": "https://context7.com/ysskrishna/quotes-convert",
+  "public_key": "pk_VesXVq9WjBT8ecKU9XIZz",
   "projectTitle": "quotes-convert",
   "description": "Zero-dependency Python library and optional CLI that converts matching double quotes to single quotes or the reverse in strings and streams, escaping inner quotes correctly.",
   "excludeFolders": [
