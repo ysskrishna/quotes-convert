@@ -1,12 +1,13 @@
 # quotes-convert
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ysskrishna/quotes-convert/blob/main/LICENSE)
-![Tests](https://github.com/ysskrishna/quotes-convert/actions/workflows/test.yml/badge.svg)
+[![Tests](https://github.com/ysskrishna/quotes-convert/actions/workflows/test.yml/badge.svg)](https://github.com/ysskrishna/quotes-convert/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/pypi/v/quotes-convert)](https://pypi.org/project/quotes-convert/)
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/quotes-convert?period=total&units=INTERNATIONAL_SYSTEM&left_color=GREY&right_color=BLUE&left_text=downloads)](https://pepy.tech/projects/quotes-convert)
 [![Documentation](https://img.shields.io/badge/docs-ysskrishna.github.io%2Fquotes--convert-blue.svg)](https://ysskrishna.github.io/quotes-convert/)
 [![Interactive Playground](https://img.shields.io/badge/demo-Try%20it%20now!-green.svg)](https://ysskrishna.github.io/quotes-convert/playground/)
+[![Author site](https://img.shields.io/badge/author-ysskrishna.space-informational)](https://ysskrishna.space)
 [![Context7](https://img.shields.io/badge/Context7-docs-18181B)](https://context7.com/ysskrishna/quotes-convert)
 [![Ask DeepWiki](https://img.shields.io/badge/DeepWiki-ask-18181B)](https://deepwiki.com/ysskrishna/quotes-convert)
 
@@ -47,7 +48,10 @@ pip install quotes-convert
 
 ## Usage Examples
 
-### Basic Usage
+<a id="basic-usage"></a>
+
+<details>
+<summary><b>Basic Usage</b></summary>
 
 ```python
 from quotes_convert import single_quotes, double_quotes
@@ -60,7 +64,12 @@ result = double_quotes('x = "hello"; y = "world"')
 print(result)  # x = "hello"; y = "world"
 ```
 
-### Handling Mixed Quotes
+</details>
+
+<a id="handling-mixed-quotes"></a>
+
+<details>
+<summary><b>Handling Mixed Quotes</b></summary>
 
 ```python
 from quotes_convert import single_quotes, double_quotes
@@ -73,7 +82,12 @@ result = double_quotes("'say \"hi\"'")
 print(result)  # "say \"hi\""
 ```
 
-### Processing JSON-like Strings
+</details>
+
+<a id="processing-json-like-strings"></a>
+
+<details>
+<summary><b>Processing JSON-like Strings</b></summary>
 
 Useful for normalizing JSON strings or Python dict definitions.
 
@@ -84,7 +98,12 @@ json_str = "{'key': 'value', 'nested': {'inner': 'data'}}"
 result = double_quotes(json_str) # {"key": "value", "nested": {"inner": "data"}}
 ```
 
-### Shell Script Processing
+</details>
+
+<a id="shell-script-processing"></a>
+
+<details>
+<summary><b>Shell Script Processing</b></summary>
 
 ```python
 from quotes_convert import single_quotes
@@ -92,6 +111,8 @@ from quotes_convert import single_quotes
 script = 'echo "Hello $USER"; grep "pattern" file.txt'
 result = single_quotes(script) # echo 'Hello $USER'; grep 'pattern' file.txt
 ```
+
+</details>
 
 ## Streaming Large Texts
 
@@ -156,34 +177,43 @@ For complete documentation including batch processing, shell integration, and ad
 
 Inspired by [Sindre Sorhus](https://github.com/sindresorhus)'s [to-single-quotes](https://github.com/sindresorhus/to-single-quotes) npm package.
 
-## Changelog
-
-See [CHANGELOG.md](https://github.com/ysskrishna/quotes-convert/blob/main/CHANGELOG.md) for a detailed list of changes and version history.
-
 ## Contributing
 
 Contributions are welcome! Please read our [Contributing Guide](https://github.com/ysskrishna/quotes-convert/blob/main/CONTRIBUTING.md) for details on our code of conduct, development setup, and the process for submitting pull requests.
+
+## Built and maintained by
+
+quotes-convert is built and maintained by:
+
+| | Name | GitHub | Role |
+|---|------|--------|------|
+| <img src="https://github.com/ysskrishna.png?size=120" width="60" height="60" alt="Y. Siva Sai Krishna"> | **Y. Siva Sai Krishna** | [@ysskrishna](https://github.com/ysskrishna) | Creator |
+
+## Changelog
+
+See [CHANGELOG](CHANGELOG.md) for release history.
 
 ## Support
 
 If you find this library helpful:
 
 - ⭐ Star the repository
-- 🐛 Report issues
+- 🐛 [Report issues](https://github.com/ysskrishna/quotes-convert/issues)
 - 🔀 Submit pull requests
 - 💝 [Sponsor on GitHub](https://github.com/sponsors/ysskrishna)
 
 ## License
 
-MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) - see [LICENSE](https://github.com/ysskrishna/quotes-convert/blob/main/LICENSE) file for details.
+MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LICENSE) for details.
 
 ---
 
 <p align="left">
   <a href="https://github.com/ysskrishna">Author's GitHub</a> •
   <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
-  <a href="https://github.com/ysskrishna/quotes-convert/issues">Report Issues</a> •
+  <a href="https://ysskrishna.space">Author's site</a> •
   <a href="https://pypi.org/project/quotes-convert/">Package on PyPI</a> •
   <a href="https://ysskrishna.github.io/quotes-convert/">Package Documentation</a> •
-  <a href="https://ysskrishna.github.io/quotes-convert/playground/">Package Playground</a>
+  <a href="https://ysskrishna.github.io/quotes-convert/playground/">Package Playground</a> •
+  <a href="https://github.com/ysskrishna/quotes-convert/issues">Report Issues</a>
 </p>
