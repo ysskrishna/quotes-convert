@@ -1,0 +1,31 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "quotes-convert",
+  "description": "Zero-dependency Python library and optional CLI that converts matching double quotes to single quotes or the reverse in strings and streams, escaping inner quotes correctly.",
+  "excludeFolders": [
+    "archive",
+    "archived",
+    "old",
+    "deprecated",
+    "legacy",
+    "tests",
+    ".github",
+    "docs",
+    "media"
+  ],
+  "excludeFiles": [
+    "CHANGELOG.md",
+    "changelog.md",
+    "LICENSE.md",
+    "license.md",
+    "CODE_OF_CONDUCT.md",
+    "NEWS.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "AGENTS.md"
+  ],
+  "rules": [
+    "Install with pip install quotes-convert and import from quotes_convert: single_quotes, double_quotes, single_quotes_stream, double_quotes_stream.",
+    "The CLI needs pip install \"quotes-convert[cli]\"; use -s or -d to choose the target quote style and -i to edit files in place."
+  ]
+}
